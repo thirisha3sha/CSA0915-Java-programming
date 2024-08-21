@@ -1,0 +1,16 @@
+//object class
+import java.io.*;
+import java.util.*;
+class abc {
+    int emp_id = 101;
+    String emp_name = "Thirisha";
+    int emp_age = 30;
+    double emp_salary = 25000.8;
+    public static void main(String[] arg) {
+        abc obj = new abc();
+        System.out.println("employee id: " + obj.emp_id + 
+                           "\nemployee name: " + obj.emp_name + 
+                           "\nemployee salary: " + obj.emp_salary + 
+                           "\nemployee age: " + obj.emp_age);
+    }
+}
