@@ -1,0 +1,30 @@
+//recursion sum of num upto limit
+import java.io.*;
+import java.util.*;
+public class abc
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the limit to add:");
+        int limit=sc.nextInt();
+        int result=sum(limit);
+        System.out.println("sum of "+limit+" numbers is:"+result);
+        
+    }
+    public static int sum(int n)
+    {
+        if(n>0)
+        {
+            return n+sum(n-1);
+        }
+        else
+        {
+            return 0;
+        }
+    }
+}
+//output:
+enter the limit to add:
+10
+sum of 10 numbers is:55
