@@ -1,0 +1,21 @@
+//lowest age in given array
+import java.io.*;
+import java.util.*;
+public class abc
+{
+    public static void main(String[] args)
+    {
+        int[] ages={13,34,24,45,67,45,23,13,89,56,45,43};
+        int lowest_age=ages[0];
+        for(int age:ages)
+        {
+            if(lowest_age>age)
+            {
+                lowest_age=age;
+            }
+        }
+        System.out.println("lowest age in array:"+lowest_age);
+    }
+}
+//output:
+lowest age in array:13
