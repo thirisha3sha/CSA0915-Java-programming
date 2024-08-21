@@ -1,0 +1,32 @@
+//sum of numbers with limit using recursion 
+import java.io.*;
+import java.util.*;
+public class abc
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the starting and ending  num to add:");
+        int start=sc.nextInt();
+        int limit=sc.nextInt();
+        int result=sum(start,limit);
+        System.out.println("sum of numbers from "+start+" to "+limit+"is:"+result);
+        
+    }
+    public static int sum(int start,int end)
+    {
+        if(end>start)
+        {
+            return end+sum(start,end-1);
+        }
+        else
+        {
+            return end;
+        }
+    }
+}
+//output:
+enter the starting and ending  num to add:
+2
+10
+sum of numbers from 2 to 10is:54
