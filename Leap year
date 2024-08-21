@@ -1,0 +1,51 @@
+//6.Write a program for matrix addition
+import java.io.*;
+import java.util.*;
+public class leap_year_check
+{
+    public static void main(String[] args)
+    {
+       Scanner sc=new Scanner(System.in);
+       System.out.println("enter a year:");
+       int year=sc.nextInt();
+       boolean check;
+       {
+           if(year%4==0)
+           {
+               if(year%100==0)
+               {
+                   if(year%400==0)
+                   {
+                       check=true;
+                   }
+                   else
+                   {
+                       check=false;
+                   }
+               }
+               else
+               {
+                   check=true;
+               }
+           }
+           else
+           {
+               check=false;
+           }
+           
+       }
+       if(check)
+       {
+           System.out.println("it is leap year!!");
+       }
+       else
+       {
+           System.out.println("it is not leap year!!");
+       }
+        
+    }
+}
+//output:
+enter a year:
+1900
+it is not leap year!!
