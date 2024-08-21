@@ -1,0 +1,20 @@
+//average of ages in array
+import java.io.*;
+import java.util.*;
+public class abc
+{
+    public static void main(String[] args)
+    {
+        int[] ages={13,34,24,45,67,45,23,13,89,56,45,43};
+        float avg,sum=0;
+        int length=ages.length;
+        for(int age:ages)
+        {
+            sum+=age;
+        }
+        avg=sum/length;
+        System.out.println("average of ages:"+avg);
+    }
+}
+//output:
+average of ages:41.416668
