@@ -1,4 +1,4 @@
-//6.Write a program for matrix addition
+//6.Write a program for leap year
 import java.io.*;
 import java.util.*;
 public class leap_year_check
