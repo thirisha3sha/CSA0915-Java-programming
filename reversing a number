@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+public class abc
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number: ");
+        int n = sc.nextInt();
+        int result=reverse(n);
+        System.out.print("reversed number:"+result);
+    }
+    public static int reverse(int n)
+    {
+        int r=0;
+        while(n!=0)
+        {
+            int digit=n%10;
+            r=r*10+digit;
+            n/=10;
+        }
+        return r;
+    }
+        
+}
+//output:
+Enter the number: 1452
+reversed number:2541
