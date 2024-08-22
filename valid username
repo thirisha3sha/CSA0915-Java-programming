@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+public class abc
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter username:");
+        String str1=sc.nextLine();
+        System.out.print("reenter username:");
+        String str2=sc.nextLine();
+        if(str1.equals(str2))
+        {
+            System.out.print("valid username!!");
+        }
+        else
+        {
+            System.out.print(" not valid username!!");
+        }
+        
+    }
+        
+}
+
+//output:
+enter username:thirisha
+reenter username:thirisha
+valid username!!
