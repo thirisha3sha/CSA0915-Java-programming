@@ -1,0 +1,63 @@
+import java.io.*;
+import java.util.*;
+public class abc
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+        int a[] = new int[size];
+
+        System.out.print("Enter the elements: ");
+        for (int i = 0; i < size; i++)
+        {
+            a[i] = sc.nextInt();
+        }
+        int prime = 0;
+        int comp = 0;
+        System.out.print("Prime numbers: ");
+        for (int i : a) {
+            if (prime_check(i)) {
+                System.out.print(i + " ");
+                prime++;
+            }
+        }
+        System.out.println(); 
+        System.out.print("Composite numbers: ");
+        for (int i : a) {
+            if (i > 1 && !prime_check(i)) {
+                System.out.print(i + " ");
+                comp++;
+            }
+        }
+        System.out.println();
+        System.out.println("Prime number count: " + prime);
+        System.out.println("Composite number count: " + comp);
+    }
+    public static boolean prime_check(int n) 
+    {
+        if (n <= 1) {
+            return false; 
+        }
+        for (int i = 2; i <= Math.sqrt(n); i++) 
+        {  
+            if (n % i == 0) 
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+//output:
+Enter the size of the array: 5
+Enter the elements: 2
+8
+1
+55
+7
+Prime numbers: 2 7 
+Composite numbers: 8 55 
+Prime number count: 2
+Composite number count: 2
