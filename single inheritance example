@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+class rainbow
+{
+    public void display()
+    {
+        System.out.println("rainbow has 7 color!!");
+    }
+}
+class color extends rainbow
+{
+    public void colordisplay()
+    {
+        System.out.println("VIBGYOR");
+    }
+}
+public class abc
+{
+    public static void main(String[] args) 
+    {
+        color obj=new color();
+        obj.display();
+        obj.colordisplay();
+    }
+        
+}
+
+//output
+rainbow has 7 color!!
+VIBGYOR
