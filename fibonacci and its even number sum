@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+public class abc
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the limit:");
+        int n=sc.nextInt();
+        int t1=0;
+        int t2=1;
+        int sum=0;
+        System.out.println("fibonacci series:");
+        for(int i=1;i<=n;i++)
+        {
+            System.out.print(t1+" ");
+            if(t1%2==0)
+            {
+                sum+=t1;
+            }
+            int t3=t1+t2;
+            t1=t2;
+            t2=t3;
+        }
+        System.out.println("\nsum of even fibonacci numbers:"+sum);
+        
+        
+          
+        
+    }
+}
+//output:
+enter the limit:
+10
+fibonacci series:
+0 1 1 2 3 5 8 13 21 34 
+sum of even fibonacci numbers:44
