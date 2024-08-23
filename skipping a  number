@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+public class abc
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the starting num(M):");
+        int m=sc.nextInt();
+        System.out.println("enter the ending num(N):");
+        int n=sc.nextInt();
+        System.out.println("enter the starting num(K):");
+        int k=sc.nextInt();
+        System.out.println("after skipping number:");
+        for(int i=m;i<=n;i+=(k+1))
+        {
+            System.out.println(i+" ");
+        }
+       
+        
+        
+          
+        
+    }
+}
+output:
+enter the starting num(M):
+50
+enter the ending num(N):
+100
+enter the starting num(K):
+7
+after skipping number:
+50 
+58 
+66 
+74 
+82 
+90 
+98 
