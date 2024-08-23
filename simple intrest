@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+public class abc{
+    public static double intrest(int amt,int years,boolean is_senior)
+    {
+        double rate_of_intrest=is_senior?12.0:10.0;
+        return (amt*years*rate_of_intrest)/100;
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the principal amt:");
+        int amt=sc.nextInt();
+        System.out.println("enter the number of years:");/
+        int years=sc.nextInt();
+        sc.nextLine();
+        System.out.print("are you a senior citizen:(y/n)");
+        char senior=sc.nextLine().charAt(0);
+        boolean is_senior=(senior=='y'||senior=='Y');
+        double result=intrest(amt,years,is_senior);
+        System.out.println("simple intrest:"+result);
+          
+        
+    }
+}
+//output:
+enter the principal amt:
+50000
+enter the number of years:
+5
+are you a senior citizen:(y/n)y
+simple intrest:30000.0
