@@ -1,0 +1,80 @@
+import java.io.*;
+import java.util.*;
+public class abc{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the num of elements in the array:");
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        System.out.println("enter the elements of the array:");
+        for(int i=0;i<size;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        double mean=mean_check(arr,size);
+        System.out.println("mean:"+mean);
+        double median=median_check(arr,size);
+        System.out.println("median:"+median);
+        double mode=mode_check(arr,size);
+        System.out.println("mode:"+mode);
+    }
+    public static double mean_check(int[] arr,int size)
+    {
+        int sum=0;
+        for(int i:arr)
+        {
+            sum+=i;
+        }
+        return (double)sum/size;
+    }
+    public static double median_check(int[] arr,int size)
+    {
+        Arrays.sort(arr);
+        int middle=size/2;
+        if(size%2==0)
+        {
+            return (arr[middle-1]+arr[middle])/2.0;
+        }
+        else
+        {
+            return arr[middle];
+        }
+    }
+    public static int mode_check(int[] arr,int size)
+    {
+        Arrays.sort(arr);
+        int mode=arr[0];
+        int max=1;
+        int count=1;
+        for(int i=1;i<size;i++)
+        {
+            if(arr[i]==arr[i-1])
+            {
+                count++;
+            }
+            else{
+                count=1;
+            }
+            if(count>max)
+            {
+                max=count;
+                mode=arr[i];
+            }
+        }
+        return mode;
+        
+    }
+}
+//output:
+enter the num of elements in the array:
+5
+enter the elements of the array:
+10
+10
+20
+80
+54
+mean:34.8
+median:20.0
+mode:10.0
