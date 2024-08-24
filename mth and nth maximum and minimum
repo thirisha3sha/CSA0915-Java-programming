@@ -1,0 +1,57 @@
+import java.io.*;
+import java.util.*;
+import java.util.Arrays;
+public class abc{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of array:");
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        System.out.println("enter the elements:");
+        for(int i=0;i<size;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("enter the value of mth maximum:");
+        int m=sc.nextInt();
+        System.out.println("enter the value of nth minimum:");
+        int n=sc.nextInt();
+        Arrays.sort(arr);
+        if(m>0&&m<=size&&n>0&&n<=size)
+        {
+            int mth_value=arr[size-m];
+            int nth_value=arr[size-n];
+            int sum=mth_value+nth_value;
+            int difference=mth_value-nth_value;
+            System.out.println("mth maximum number:"+mth_value);
+            System.out.println("nth minimum number:"+nth_value);
+            System.out.println("sum:"+sum);
+            System.out.println("difference:"+difference);
+            
+        }
+        else{
+            System.out.println("invalid inputs of m and n!!");
+        }
+    }
+    
+}
+//output:
+enter the size of array:
+7
+enter the elements:
+1
+5
+6
+3
+4
+2
+7
+enter the value of mth maximum:
+2
+enter the value of nth minimum:
+3
+mth maximum number:6
+nth minimum number:5
+sum:11
+difference:1
