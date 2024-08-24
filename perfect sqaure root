@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+public class abc{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number:");
+        int n=sc.nextInt();
+        int square_root=(int) Math.sqrt(n);
+        if(square_root*square_root==n)
+        {
+            System.out.println("perfect square root!!");
+            System.out.println("Square root of "+n+" is :"+square_root);
+            System.out.println("negative Square root of "+n+" is :"+square_root);
+        }
+        else
+        {
+            System.out.println(n+" is not a perfect square!!");
+        }
+}
+}
+//output:
+enter the number:
+25
+perfect square root!!
+Square root of 25 is :5
+negative Square root of 25 is :5
