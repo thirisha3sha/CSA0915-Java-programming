@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+public class abc{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter three numbers:");
+        int n1=sc.nextInt();
+        int n2=sc.nextInt();
+        int n3=sc.nextInt();
+        if(n1==n2&n2==n3)
+        {
+            System.out.println("three numbers are equal!!");
+        }
+        else{
+            System.out.println("three numbers are not equal!!");
+        }
+    }
+    
+}
+//output:
+enter three numbers:
+8
+8
+8
+three numbers are equal!!
