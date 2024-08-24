@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+public class abc{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the string:");
+        String s=sc.nextLine();
+        StringBuilder spcl_char=new StringBuilder();
+        int count=0;
+        for(int i=0;i<s.length();i++)
+        {
+            char c=s.charAt(i);
+            if(!Character.isLetterOrDigit(c) && !Character.isWhitespace(c))
+            {
+                spcl_char.append(c).append(" ");
+                count++;
+            }
+        }
+        System.out.println("special characters:"+spcl_char.toString());
+        System.out.println("special characters count:"+count);
+        
+       
+}
+}
+//output:
+enter the string:
+thirisha@11!@# uhgb^%
+special characters:@ ! @ # ^ % 
+special characters count:6
