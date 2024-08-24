@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+public class abc{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the starting num:");
+        int a=sc.nextInt();
+        System.out.println("enter the ending num:");
+        int b=sc.nextInt();
+        System.out.println("composite num from "+a+" to "+b+" is:");
+        for(int i=a;i<=b;i++)
+        {
+            if(is_comp(i))
+            {
+                System.out.print(i+" ");
+            }
+        }
+        
+    }
+    public static boolean is_comp(int n)
+    {
+        if(n<=1)
+        {
+            return false;
+        }
+        int divisior=0;
+        for(int i=1;i<=n;i++)
+        {
+            if(n%i==0)
+            {
+                divisior++;
+            }
+        }
+        return divisior>2;
+    }
+    
+}
+//output:
+enter the starting num:
+12
+enter the ending num:
+19
+composite num from 12 to 19 is:
+12 14 15 16 18 
