@@ -9,6 +9,8 @@ public class abc{
         int b=sc.nextInt();
         int result=gcd(a,b);
         System.out.println("gcd:"+result);
+        int result2=lcm(a,b);
+        System.out.println("lcm:"+result2);
     }
     public static int gcd(int a,int b)
     {
@@ -20,9 +22,14 @@ public class abc{
         }
         return a;
     }
+    public static int lcm(int a,int b)
+    {
+        return (a*b)/gcd(a,b);
+    }
 }
-//output:
+//output;
 enter two numbers:
 12
 18
 gcd:6
+lcm:36
