@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+public class abc{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a string:");
+        String input=sc.nextLine().toLowerCase();
+        String vowels="";
+        int vowel_count=0;
+        System.out.println("vowels in string:");
+        for(int i=0;i<input.length();i++)
+        {
+            char c=input.charAt(i);
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
+            {
+                System.out.println(c);
+                vowel_count++;
+            }
+           
+        }
+        System.out.println("vowel count:"+vowel_count);
+    }
+       
+}
+//output:
+enter a string:
+simats engineering
+vowels in string:
+i
+a
+e
+i
+e
+e
+i
+vowel count:7
