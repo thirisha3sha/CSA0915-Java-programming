@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+public class abc{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the decimal value:");
+        int decimal=sc.nextInt();
+        String binary_value=decimal_to_binary(decimal);
+        String octal_value=decimal_to_octal(decimal);
+        System.out.println("binary value:"+binary_value);
+        System.out.println("octal value:"+octal_value);
+    }
+    public static String decimal_to_binary(int decimal)
+    {
+        if(decimal==0)
+        {
+            return "0";
+        }
+        String binary="";
+        while(decimal>0)
+        {
+            int remainder=decimal%2;
+            binary=remainder+binary;
+            decimal/=2;
+        }
+        return binary;
+        
+    }
+    public static String decimal_to_octal(int decimal)
+    {
+        if(decimal==0)
+        {
+            return "0";
+        }
+        String octal="";
+        while(decimal>0)
+        {
+            int remainder=decimal%8;
+            octal=remainder+octal;
+            decimal/=8;
+       }
+    return octal;
+    }
+}
