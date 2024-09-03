@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+public class abc
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number:");
+        int n=sc.nextInt();
+        int rev=0;
+        while(n!=0)
+        {
+            int rem=n%10;
+            rev=rev*10+rem;
+            n/=10;
+        }
+        System.out.println("reverse number:"+rev);
+    }
+}
+//output:
+enter the number:
+456
+reverse number:654
