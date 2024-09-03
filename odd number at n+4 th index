@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+public class abc
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the index(n):");
+        int n=sc.nextInt();
+        int num=n+4;
+        int odd=2*num-1;
+        System.out.println("odd number after the index "+n+" is: "+odd);
+    }
+}
+//output:
+enter the index(n):
+4
+odd number after the index 4 is: 15
