@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+public class abc
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the starting num:");
+        int start=sc.nextInt();
+        System.out.println("enter the ending num:");
+        int end=sc.nextInt();
+        int count=0;
+        for(int i=start;i<=end;i++)
+        {
+            int comp=0;
+            for(int j=1;j<=start;j++)
+            {
+                if(i%j==0)
+                {
+                    comp++;
+                   
+                }
+            }
+            if(comp>2)
+            {
+                count++;
+                System.out.print(i+" ");
+            }
+        }
+        System.out.println("\ncount of composite numbers:"+count);
+        
+    }
+}
+//output:
+enter the starting num:
+12
+enter the ending num:
+19
+12 14 15 16 18 
+count of composite numbers:5
