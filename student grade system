@@ -1,0 +1,56 @@
+/* Write a program to enter the marks of a student in four subjects.
+Then calculate the total and aggregate, display the grade obtained
+by the student. If the student scores an aggregate greater than
+75%, then the grade is Distinction. If aggregate is 60>= and <75,
+then the grade is First Division. If aggregate is 50 >= and <60,
+then the grade is Second Division. If aggregate is 40>= and <50,
+then the grade is Third Division. Else the grade is Fail. */
+import java.io.*;
+import java.util.*;
+public class student_grade
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the four subjects marks:");
+        int marks[]=new int[4];
+        for(int i=0;i<4;i++)
+        {
+            marks[i]=sc.nextInt();
+        }
+        int total=0;
+        for(int i=0;i<4;i++)
+        {
+            total+=marks[i];
+        }
+        float agg=(float)total/4f;
+        System.out.println("aggregation:"+agg);
+        if(agg>=75)
+        {
+            System.out.println("DISTINCTION");
+        }
+        else if(agg>=60&&agg<75)
+        {
+            System.out.println("First division");
+        }
+        else if(agg>=50&&agg<60)
+        {
+            System.out.println("Second division");
+        }
+        else if(agg>=40&& agg<50)
+        {
+            System.out.println("Third division");
+        }
+        else{
+            System.out.println("Fail");
+        }
+    }
+}
+//output
+enter the four subjects marks:
+90
+90
+90
+85
+aggregation:88.75
+DISTINCTION
