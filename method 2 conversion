@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+public class decimal_to_bin_oct
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the digit to convert:");
+        int n=sc.nextInt();
+        String bin=Integer.toBinaryString(n);
+        String oct=Integer.toOctalString(n);
+        System.out.println("binary:"+bin);
+        System.out.println("octal:"+oct);
+    }
+}
+//output
+enter the digit to convert:
+15
+binary:1111
+octal:17
