@@ -1,0 +1,35 @@
+/*Write a program to calculate tax given the following conditions:
+a. If income is less than or equal to 1,50,000 then no tax
+b. If taxable income is 1,50,001 – 3,00,000 the charge 10% tax
+c. If taxable income is 3,00,001 – 5,00,000 the charge 20% tax
+d. If taxable income is above 5,00,001 then charge 30% tax
+ */
+import java.io.*;
+import java.util.*;
+public class tax{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter your income:");
+        int income=sc.nextInt();
+        if(income<=150000)
+        {
+            System.out.println("no tax");
+        }
+        else if(income>=150001&&income<=300000)
+        {
+            System.out.println("tax:"+income/10);
+        }
+        else if(income>=300001&&income<=500000)
+        {
+            System.out.println("tax:"+income/20);
+        }
+        else{
+            System.out.println("tax:"+income/30);
+        }
+    }
+}
+//output:
+enter your income:
+300000
+tax:30000
