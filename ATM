@@ -1,0 +1,41 @@
+/*to print the total amount available in the ATM machine with the
+conditions applied.
+Total denominations are 2000, 500, 200, 100, get the denomination priority from the user
+and the total number of notes from the user to display the total available balance to the user */
+import java.io.*;
+import java.util.*;
+public class ATM{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the total num of notes:");
+        int n=sc.nextInt();
+        int notes[]=new int[n];
+        int count[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("enter the denomination:");
+            notes[i]=sc.nextInt();
+            System.out.println("enter the number of notes in the denomination:");
+            count[i]=sc.nextInt();
+        }
+        int total=0;
+        for(int i=0;i<n;i++)
+        {
+            total+=notes[i]*count[i];
+        }
+        System.out.println("total amount:"+total);
+    }
+}
+//output
+enter the number of notes in the denomination:
+4
+enter the denomination:
+200
+enter the number of notes in the denomination:
+32
+enter the denomination:
+100
+enter the number of notes in the denomination:
+20
+total amount:12400
