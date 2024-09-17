@@ -1,0 +1,44 @@
+
+import java.io.*;
+import java.util.*;
+public class n_perfect
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the limit:");
+        int n=sc.nextInt();
+        int count=0;
+        int num=1;
+        System.out.println("perfect numbers:");
+        while(count<n)
+        {
+            if(is_perfect(num))
+            {
+                System.out.println(num+" ");
+                count++;
+            }
+            num++;
+        }
+    }
+    public static boolean is_perfect(int num)
+    {
+        int sum=0;
+        for(int i=1;i<num;i++)
+        {
+            if(num%i==0)
+            {
+                sum+=i;
+            }
+        }
+        return sum==num;
+    }
+
+}
+//output
+enter the limit:
+3
+perfect numbers:
+6
+28
+496
