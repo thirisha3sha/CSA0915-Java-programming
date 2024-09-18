@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+public class spcl_char_count
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a string:");
+        String input=sc.nextLine();
+        int count=0;
+        System.out.println("special charcters in statement:");
+        for(int i=0;i<input.length();i++)
+        {
+            char c=input.charAt(i);
+            if(!((c>=65&&c<=90)||(c>=97&&c<=122)||(c>=48&&c<=57)||c==32))
+            {
+                System.out.println(c+" ");
+                count++;
+            }
+        }
+        System.out.println("special characters count:"+count);
+    }
+}
+//output:
+enter a string:
+thirisha@#$@#3sha^&%!@(&^
+special charcters in statement:
+@
+#
+$
+@
+#
+^
+&
+%
+!
+@
+(
+&
+^
+special characters count:13
