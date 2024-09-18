@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class bank_class {
+    public static double getrate(String bankname){
+        switch(bankname.toUpperCase())
+        {
+            case "SBI":
+            return 8.4;
+            case "ICICI":
+            return 7.3;
+            case "AXIS":
+            return 9.7;
+            default:
+            return 0.0;
+        }
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the bank name:");
+        String bankname=sc.nextLine();
+        double rateofintrest=getrate(bankname);
+        System.out.println("ROI = "+rateofintrest);
+    }
+}
+//output:
+enter the bank name:
+axis
+ROI = 9.7
