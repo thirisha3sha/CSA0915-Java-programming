@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+public class bin_to_dec_oct
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the binary string:");
+        String bin=sc.nextLine();
+        int dec=Integer.parseInt(bin,2);
+        String oct=Integer.toOctalString(dec);
+        System.out.println("decimal:"+dec);
+        System.out.println("octal:"+oct);
+    }
+}
+//output:
+enter the binary string:
+10101
+decimal:21
+octal:25
