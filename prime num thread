@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.*;
+public class prime_thread
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the num:");
+        int n=sc.nextInt();
+        prime p=new prime(n);
+        Thread t=new Thread(p);
+        t.start();
+    }
+}
+class prime implements Runnable
+{
+    private int n;
+    public prime(int n)
+    {
+        this.n=n;
+    }
+    public void run()
+    {
+        if(is_prime(n))
+        {
+            System.out.println(n+" is prime!!");
+        }
+        else
+        {
+            System.out.println(n+" is not prime!!");
+        }
+    }
+    private boolean is_prime(int n)
+    {
+        if(n<=1)
+        {
+            return false;
+        }
+        for(int i=2;i<=Math.sqrt(n);i++)
+        {
+            if(n%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+//output:
+enter the num:
+7
+7 is prime!!
