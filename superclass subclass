@@ -1,0 +1,50 @@
+/* Bring out the situation in which member names of a subclass hide members by the same
+name in the super class. How it can be resolved? Write Suitable code in Java and
+Implement above scenario with the Parametrized Constructor (accept int type
+parameter) of the Super Class can be called from Sub Class Using super () and display
+the input values provided.
+Sample Input : 100, 200
+Sample Output : 100, 200
+ */
+import java.io.*;
+import java.util.*;
+class superclass
+{
+    int n;
+    superclass(int n)
+    {
+        this.n=n;
+        System.out.println("superclass constructor:num="+n);
+    }
+    void display()
+    {
+        System.out.println("superclass num:"+n);
+    }
+}
+class subclass extends superclass{
+    int n;
+    subclass(int nsuper,int nsub)
+    {
+        super(nsuper);
+        this.n=nsub;
+        System.out.println("subclass constructor:num="+nsub);
+    }
+    void display()
+    {
+        super.display();
+        System.out.println("subclass num:"+n);
+    }
+}
+public class example_subclass
+{
+    public static void main(String[] args)
+    {
+        subclass obj=new subclass(100,200);
+        obj.display();
+    }
+}
+//output:
+superclass constructor:num=100
+subclass constructor:num=200
+superclass num:100
+subclass num:200
