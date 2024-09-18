@@ -1,0 +1,81 @@
+import java.io.*;
+import java.util.*;
+public class lower_upper_digit_count{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int upper_count=0,lower_count=0,digit_count=0;
+        System.out.println("enter * to exit!!");
+        while(true)
+        {
+            System.out.println("enter any character:");
+            char c=sc.next().charAt(0);
+            if(c=='*')
+            {
+                break;
+            }
+            if(c>=65&&c<=90)
+            {
+                upper_count++;
+            }
+            else if(c>=97&&c<=122)
+            {
+                lower_count++;
+            }
+            else if(c>=48&&c<=57)
+            {
+                digit_count++;
+            }
+        }
+        System.out.println("uppercase count:"+upper_count);
+        System.out.println("lowercase count:"+lower_count);
+        System.out.println("digits count:"+digit_count);
+    }
+}
+//output:
+enter * to exit!!
+enter any character:
+d
+enter any character:
+s 
+enter any character:
+h
+enter any character:
+A
+enter any character:
+T
+enter any character:
+H
+enter any character:
+Ie
+enter any character:
+6
+enter any character:
+5
+enter any character:
+g
+enter any character:
+4
+enter any character:
+J
+enter any character:
+D
+enter any character:
+r
+enter any character:
+y
+enter any character:
+s
+enter any character:
+l
+enter any character:
+j
+enter any character:
+S
+enter any character:
+o
+enter any character:
+*
+uppercase count:7
+lowercase count:10
+digits count:3
