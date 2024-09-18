@@ -1,0 +1,50 @@
+/*.Write a program to read the numbers until -1 is encountered. Find the
+average of positive numbers and negative numbers entered by user. */
+import java.io.*;
+import java.util.*;
+public class positive_negative_num
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int pos_count=0,neg_count=0;
+        double pos_sum=0,neg_sum=0;
+        System.out.println("enter numbers(-1 to exit):");
+        while(true)
+        {
+            System.out.print("enter the numbers:");
+            int num=sc.nextInt();
+            if(num==-1)
+            {
+                break;
+            }
+            if(num>0)
+            {
+                pos_sum+=num;
+                pos_count++;
+            }
+            else
+            {
+                neg_sum+=num;
+                neg_count++;
+            }
+        }
+        double pos_avg=(pos_count>0)?(pos_sum/pos_count):0;
+        double neg_avg=(neg_count>0)?(neg_sum/neg_count):0;
+        System.out.println("avg of positive numbers:"+pos_avg);
+        System.out.println("avg of negative numbers:"+neg_avg);
+    }
+}
+//output:
+enter numbers(-1 to exit):
+enter the numbers:4
+enter the numbers:34
+enter the numbers:3
+enter the numbers:7
+enter the numbers:-3
+enter the numbers:-5
+enter the numbers:-4
+enter the numbers:-6
+enter the numbers:-1
+avg of positive numbers:12.0
+avg of negative numbers:-4.5
