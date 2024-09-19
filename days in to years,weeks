@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+public class days{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number of days:");
+        int n=sc.nextInt();
+        int year=n/365;
+        int weeks=(n%365)/7;
+        int days=(n%365)%7;
+        System.out.println("number of years:"+year);
+        System.out.println("number of weeks:"+weeks);
+        System.out.println("number of days:"+days);
+        }
+}
+//output:
+enter the number of days:
+756
+number of years:2
+number of weeks:3
+number of days:5
