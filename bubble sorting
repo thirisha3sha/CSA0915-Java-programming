@@ -1,0 +1,44 @@
+//bubble sort
+import java.io.*;
+import java.util.*;
+public class Bubble_sorting
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array:");
+        int size=sc.nextInt();
+        int a[]=new int[size];
+        System.out.println("enter the elements of the array:");
+        for(int i=0;i<size;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        for(int i=0;i<size;i++)
+        {
+            for(int j=0;j<size-i-1;j++)
+            {
+                if(a[j]>a[j+1])
+                {
+                    int temp=a[j];
+                    a[j]=a[j+1];
+                    a[j+1]=temp;
+                }
+            }
+        }
+        System.out.println("sorted array:");enter the size of the array:
+5
+enter the elements of the array:
+21
+87
+32
+4
+65
+sorted array:
+4 21 32 65 87
+        for(int i=0;i<size;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+    }
+}//output:
