@@ -1,0 +1,41 @@
+//second min in array
+import java.io.*;
+import java.util.*;
+public class second_minimum_in_arr
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the array:");
+        int size=sc.nextInt();
+        int a[]=new int[size];
+        System.out.println("enter the elements of the array:");
+        for(int i=0;i<size;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+        int min=a[0];
+        int second_min=a[0];
+        for(int i=0;i<size;i++)
+        {
+            if(a[i]<min)
+            {
+                second_min=min;
+                min=a[i];
+            }
+        }
+        System.out.println("second minimum in array:"+second_min);
+        
+        
+    }
+}
+//output:
+enter the size of the array:
+5
+enter the elements of the array:
+34
+78
+95
+12
+5
+second minimum in array:12
