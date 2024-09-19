@@ -1,0 +1,43 @@
+/*program to print number of factors and to print nth factor of the given number.  */
+import java.io.*;
+import java.util.*;
+public class nth_factor
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the num:");
+        int num=sc.nextInt();
+        System.out.println("enter the value to find nth factor:");
+        int n=sc.nextInt();
+        int count=0;
+        int factor=-1;
+        for(int i=1;i<=num;i++)
+        {
+            if(num%i==0)
+            {
+                count++;
+                if(count==n)
+                {
+                    factor=i;
+                }
+            }
+        }
+        System.out.println("total num of factors:"+count);
+        if(factor!=-1)
+        {
+            System.out.println(n+"th factor of num "+num+" is:"+factor);
+        }
+        else{
+            System.out.println("there is no "+n+"th factor for num "+num);
+        }
+
+    }
+}
+//output:
+enter the num:
+100
+enter the value to find nth factor:
+4
+total num of factors:9
+4th factor of num 100 is:5
