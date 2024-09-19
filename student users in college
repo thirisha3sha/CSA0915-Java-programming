@@ -1,0 +1,25 @@
+/*Write a program to find the number of student users in the college, get the total users,
+staff users details from the client. Note for every 3 staff user there is one Non teaching
+staff user assigned by default.  */
+import java.io.*;
+import java.util.*;
+public class users{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the total users:");
+        int tot_users=sc.nextInt();
+        System.out.println("enter the staff users:");
+        int staff_users=sc.nextInt();
+        int non_tech_users=staff_users/3;
+        int stud_users=tot_users-(staff_users+non_tech_users);
+        System.out.println("student users:"+stud_users);
+
+    }
+}
+//output:
+enter the total users:
+856
+enter the staff users:
+126
+student users:688
