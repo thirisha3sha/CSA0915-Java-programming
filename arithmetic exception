@@ -1,0 +1,35 @@
+/*Generate a Java code to perform simple arithmetic operations and to throw Arithmetic Exception for Division-by-Zero. */
+import java.io.*;
+import java.util.*;
+public class arithmetic_calci
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter two numbers:");
+        double n1=sc.nextInt();
+        double n2=sc.nextInt();
+        System.out.println("addition:"+(n1+n2));
+        System.out.println("subtraction:"+(n1-n2));
+        System.out.println("Multilication:"+(n1*n2));
+        try{
+            if(n2==0)
+            {
+                throw new ArithmeticException("cannot divide by 0");
+            }
+            System.out.println("division:"+(n1/n2));
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("error:"+e.getMessage());
+        }
+    }
+}
+//output:
+enter two numbers:
+65
+7
+addition:72.0
+subtraction:58.0
+Multilication:455.0
+division:9.285714285714286
