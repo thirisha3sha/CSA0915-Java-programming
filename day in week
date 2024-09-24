@@ -1,0 +1,43 @@
+import java.io.*;
+import java.util.*;
+public class day{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the the date,month,year:");
+        int day=sc.nextInt();
+        int month=sc.nextInt();
+        int year=sc.nextInt();
+        String result=find_day(day,month,year);
+        System.out.println("day:"+result);
+    }
+    public static String find_day(int d,int m,int y)
+    {
+        if(m<3)
+        {
+            m+=12;
+            y-=y;
+        }
+        int k=y%100;
+        int j=y/100;
+        int h=(d+(13*(m+1))/5+k+(k/4)+(j/4)-(2*j))%7;
+        switch(h)
+        {
+            case 0:return "saturday";
+            case 1:return "sunday";
+            case 2:return "monday";
+            case 3:return "tuesday";
+            case 4:return "wednesday";
+            case 5:return "thursday";
+            case 6:return "friday";
+            default:return " ";
+        }
+
+    }
+}
+//output:
+enter the the date,month,year:
+9
+10
+2004
+day:saturday
