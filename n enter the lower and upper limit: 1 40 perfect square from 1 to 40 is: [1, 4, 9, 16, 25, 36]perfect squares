@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+public class n_perfect_square
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the lower and upper limit:");
+        int lower=sc.nextInt();
+        int upper=sc.nextInt();
+        System.out.println("perfect square from "+lower+" to "+upper+" is:");
+        ArrayList<Integer> result=new ArrayList<>();
+        int i=0,x=0;
+        while(i<upper)
+        {
+            int sum=0;
+            int y=x*x;
+            int temp=y;
+            while(y!=0)
+            {
+                int rem=y%10;
+                sum+=rem;
+                y/=10;
+            }
+            if(sum<10&&temp>=lower&&temp<=upper)
+            {
+                result.add(temp);
+            }
+            i=x*x;
+            x++;
+        }
+        System.out.println(result);
+    }
+}
+//output:
+enter the lower and upper limit:
+1
+40
+perfect square from 1 to 40 is:
+[1, 4, 9, 16, 25, 36]
