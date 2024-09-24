@@ -1,0 +1,94 @@
+import java.io.*;
+import java.util.*;
+public class bank_management
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the name:");
+        String name=sc.nextLine();
+        System.out.println("enter the type of account(savings/):");
+        String type=sc.nextLine();
+        System.out.println("enter the account num:");
+        int acc_num=sc.nextInt();
+        System.out.println("enter the balance amount:");
+        double bal=sc.nextDouble();
+        bank b=new bank(name,type,acc_num,bal);
+        b.display();
+        System.out.println("enter the amount to deposit:");
+        double deposit_amount=sc.nextInt();
+        b.deposit(deposit_amount);
+        System.out.println("enter the amount to withdraw:");
+        double withdraw_amount=sc.nextInt();
+        b.withdraw(withdraw_amount);
+        b.display();
+    }
+}
+    class bank{
+        String name,type;
+        int acc_num;
+        double bal;
+        bank(String n,String t,int a,double b)
+        {
+            name=n;
+            type=t;
+            acc_num=a;
+            bal=b;
+        }
+        void deposit(double d)
+        {
+            if(d>0)
+            {
+                bal+=d;
+                System.out.println("deposited:"+d);
+            }
+            else{
+                System.out.println("invalid amount!!");
+            }
+        }
+        void withdraw(double w)
+        {
+            if(w>0&&w<=bal)
+            {
+                bal=bal-w;
+                System.out.println("withdraw:"+w);
+            }
+            else{
+                System.out.println("invalid amount to withdraw!!");
+            }
+        }
+        void display()
+        {
+            System.out.println("Account details:");
+            System.out.println("name:"+name);
+            System.out.println("Account type:"+type);
+            System.out.println("Account num:"+acc_num);
+            System.out.println("balance:"+bal);
+
+        }
+    }
+//output:
+enter the name:
+thirisha
+enter the type of account(savings/):
+s
+enter the account num:
+414059
+enter the balance amount:
+1000
+Account details:
+name:thirisha
+Account type:s
+Account num:414059
+balance:1000.0
+enter the amount to deposit:
+1000
+deposited:1000.0
+enter the amount to withdraw:
+500
+withdraw:500.0
+Account details:
+name:thirisha
+Account type:s
+Account num:414059
+balance:1500.0
