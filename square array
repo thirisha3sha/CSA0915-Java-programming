@@ -1,0 +1,27 @@
+/*Write a Program to create an array with the First Element as the Number and
+Second Element as the Square of the Number. */
+import java.io.*;
+import java.util.*;
+public class square_array
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the lower and upper limit:");
+        int lower=sc.nextInt();
+        int upper=sc.nextInt();
+        for(int i=lower;i<=upper;i++)
+        {
+            System.out.println("("+i+","+(i*i)+")");
+        }
+    }
+}
+//output:
+enter the lower and upper limit:
+45
+49
+(45,2025)
+(46,2116)
+(47,2209)
+(48,2304)
+(49,2401)
