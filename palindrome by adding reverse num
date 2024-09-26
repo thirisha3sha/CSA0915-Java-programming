@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+public class palindrome_reverse
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number:");
+        int n=sc.nextInt();
+        int original=n;
+        while(true)
+        {
+            int reverse=0;
+            int temp=n;
+            while(temp!=0)
+            {
+                int digit=temp%10;
+                reverse=reverse*10+digit;
+                temp/=10;
+            }
+            if(original==reverse)
+            {
+                System.out.println("\n"+original+" is palindrome!!");
+                break;
+            }
+            else{
+                System.out.println("Current number: " + original + ", Reverse: " + reverse);
+                original += reverse;
+                n = original; 
+                System.out.println("New number after adding reverse: " + original);
+        }
+    }
+    }
+}
+//output:
+enter the number:
+7325
+Current number: 7325, Reverse: 5237
+New number after adding reverse: 12562
+Current number: 12562, Reverse: 26521
+New number after adding reverse: 39083
+Current number: 39083, Reverse: 38093
+New number after adding reverse: 77176
+Current number: 77176, Reverse: 67177
+New number after adding reverse: 144353
+Current number: 144353, Reverse: 353441
+New number after adding reverse: 497794
+
+497794 is palindrome!!
