@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+public class simpleintrest{
+    public static void main(String[] args)
+    {
+         Scanner sc=new Scanner(System.in);
+         System.out.println("enter principal amount:");
+         double amt=sc.nextInt();
+         System.out.println("enter years:");
+         int years=sc.nextInt();
+         System.out.println("are you a senior citizen(y/n):");
+         char c=sc.next().charAt(0);
+         double intrest=0.0;
+         if(c=='y'||c=='Y')
+         {
+            intrest=(amt*years*12.0)/100;
+            System.out.println("intrest:"+intrest);
+         }
+         else{
+            intrest=(amt*years*10.0)/100;
+            System.out.println("intrest:"+intrest);
+         }
+    }
+}
+output:
+enter principal amount:
+200000
+enter years:
+3
+are you a senior citizen(y/n):
+n
+intrest:60000.0
