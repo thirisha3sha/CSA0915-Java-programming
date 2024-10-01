@@ -1,0 +1,59 @@
+import java.io.*;
+import java.util.*;
+public class roman
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the roman letter:");
+        String s=sc.nextLine();
+        System.out.println(roman_decimal(s));
+
+    }
+    public static int roman_decimal(String s)
+    {
+        int result=0;
+        for(int i=0;i<s.length();i++)
+        {
+            int s1=value(s.charAt(i));
+            if((i+1)<s.length())
+            {
+                int s2=value(s.charAt(i+1));
+                if(s1>=s2)
+                {
+                    result=result+s1;
+                }
+                else{
+                    result=result+(s2-s1);
+                    i++;
+                }
+            }
+            else{
+                result=result+s1;
+            }
+        }
+        return result;
+    }
+    public static int value(char c)
+    {
+        if(c=='I')
+            return 1;
+        else if(c=='V')
+            return 5;
+        else if(c=='X')
+            return 10;
+        else if(c=='L')
+            return 50;
+        else if(c=='C')
+            return 100;
+        else if(c=='D')
+            return 500;
+        else if(c=='M')
+            return 1000;
+        return -1;    
+    }
+}
+//output
+enter the roman letter:
+VII
+7
